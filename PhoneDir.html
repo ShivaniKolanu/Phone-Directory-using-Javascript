@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PHONE DIRECTORY</title>
+	<link rel="stylesheet" href="phonedir.css">
+	<script src="phonedir.js"></script>
+<style type="text/css">
+    .output1{
+        padding: 10px;
+        min-height: 20px;
+        margin: 20px 0;
+        background-color: #f1f1f1;
+        border: 1px solid #e4e4e4;
+width:15%;
+    }
+</style>
+<style type="text/css">
+    .output2{
+        padding: 10px;
+        min-height: 20px;
+        margin: 20px 0;
+        background-color: #f1f1f1;
+        border: 1px solid #e4e4e4;
+width:15%;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#fullname").keyup(function(){
+        // Getting the current value of textarea
+        var currentText = $(this).val();
+        
+        // Setting the Div content
+        $(".output1").text(currentText);
+    });
+});
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#phone").keyup(function(){
+        // Getting the current value of textarea
+        var currentText = $(this).val();
+        
+        // Setting the Div content
+        $(".output2").text(currentText);
+    });
+});
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="title">
+			<h1>PHONE DIRECTORY</h1>
+		</div>
+		<div class="quickadd"><button id="QuickAdd">Add</button></div>
+		<div class="quickaddForm">
+			<label for="fullname">Name</label><br><input type="text"  id="fullname" class="formFields">
+			<label for="phone">Phone</label><input type="text" id="phone" class="formFields">
+			<br>
+<h3>Subscriber to be added:</h3>
+
+Name:<div class="output1"></div>
+Phone Number:<div class="output2"></div>
+			<center><button id="Add">Add Now</button>&nbsp;<button id="Cancel">Cancel</button>
+		</div>
+<br>
+		<div class="addbook">
+			<!-- <div class="entry">
+				<div class="name"><p>Shivani</p></div>
+				<div class="phone"><p>8976453452</p></div>
+				<div class="del"><a href="#">Delete</a></div>
+			</div> -->
+			
+		</div>
+	</div>
+</body>
+</html>
